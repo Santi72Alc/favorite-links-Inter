@@ -5,7 +5,7 @@
 
 ---
 
-#<center>Favorite Links</center>
+# <center>Favorite Links</center>
 
 Este proyecto está basado en un vídeo del magnífico youtuber ‘Fazt’ y el vídeo original, por si estás interesado en visionarlo, lo puede encontrar [aquí](https://www.youtube.com/watch?v=qJ5R9WTW0_E).
 
@@ -29,7 +29,7 @@ En el caso de que el software requerido no esté instalado, les dejo links exter
 
 Todas las instrucciones de instalación del proyecto son indicadas para el sistema operativo Linux, en su distribución UBUNTU o similares, que son en las que la he realizado. No debería ser muy difícil  adaptarlas para Windows u otro sistema operativo.
 
-###**Descarga del proyecto**
+### **Descarga del proyecto**
 
 El proyecto está almacenado en la plataforma GitHub y se puede descargar desde [aquí](https://github.com/Santi72Alc/Favorite-Links.git).
 
@@ -39,9 +39,9 @@ Si está descargado con el fichero comprimido, se debe descomprimir antes de con
 
 A continuación, abrir una terminal de comandos en el directorio del proyecto descomprimido o clonado. ***Importante!!*** Revisar proceso de preparación, configuración e instalación antes de realizar cualquier prueba.
 
-###**Preparación, configuración e instalación del proyecto**
+### **Preparación, configuración e instalación del proyecto**
 
-####**Configuración del servidor MySQL**
+#### **Configuración del servidor MySQL**
 
 ANTES de hacer nada con el proyecto descargado, verificaremos la existencia y el funcionamiento del servidor de MySQL en nuestro sistema.
 
@@ -70,13 +70,13 @@ Debemos de posicionarnos en la carpeta ‘/database’ del directorio raíz en e
 
 donde *username* se deberá de cambiar por el usuario registrado en MySQL. Una vez introducida la clave del usuario indicado, se generará todo lo necesario referente a la base de datos y sus tablas.
 
-####**Acceso a la base de datos** 
+#### **Acceso a la base de datos** 
 
 La modificación a realizar es en el fichero ‘/src/*config.js*’ del proyecto.
 
 Este fichero está con una estructura formato JSON y tiene datos de configuración en los que está la clave ‘*database*’ con sus valores. Debemos modificarlos y adecuarlos a nuestra conexión. En principio sólo habría que modificar el ‘*user*’ y ‘*password*’ para tener un correcto acceso a la base de datos.
 
-#####**Actualización de librerías**
+#### **Actualización de librerías**
 
 Por último paso en la configuración del proyecto, sólo queda descargar y actualizar todas las librerías necesarias para la correcta ejecución del mismo.
 
@@ -86,17 +86,17 @@ Para esto nos situaremos en el directorio raíz del proyecto y ejecutamos las si
 
 Con esta instrucción quedan instaladas y configuradas todas las librerías necesarias para el proyecto.w
 
-####**Ejecución del proyecto**
+#### **Ejecución del proyecto**
 
 La siguiente y última sentencia a ejecutar nos permite poner en marcha el proyecto.
 
 >\$> npm run dev
 
-####**Finalización del proyecto**
+#### **Finalización del proyecto**
 
 Para la finalizar con la ejecución de proyecto, debemos presionar ‘Ctrl+C’ en la terminal de comandos.
 
-##<center>**POSIBLES ERRORES**</center>
+## <center>**POSIBLES ERRORES**</center>
 
 
 Los posibles errores que he detectado, es que pueda darse que el puerto a utilizar ya esté siendo ocupado por algún servicio, lo cual deberemos evitar la coincidencia cambiando el valor en el fichero de configuración indicado en el apartado de ***Acceso a la base de datos***.
