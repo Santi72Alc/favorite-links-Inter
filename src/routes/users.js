@@ -20,10 +20,11 @@ router.get("/delete", isLoggedIn, async (req, res) => {
 // Route to confirm to delete the user
 router.get("/delete/:id", isLoggedIn, async (req, res) => {
     const { id } = req.params;
+    const { user } = req;
     try {
         pool.query("DELETE FROM users WHERE id=?", [id]);
         console.log(`User [${id}] deleted!!`);
-        req.flash("message", `Bye ${username}. We will miss you...`);
+        req.flash("message", `Bye ${user.username}. We will miss you...`);
         req.logOut();
         res.redirect("/");
     } catch (error) {
