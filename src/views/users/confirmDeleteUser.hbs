@@ -1,0 +1,22 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card p-4 text-center">
+                <div class="card-title">
+                    <h1>Delete your account, <em class="text-info">{{user.username}}</em> ??</h1>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <h4>This action delete your user account and all your saved links</h4>
+                        <h2 class="text-danger text-uppercase">Are you sure??</h2>
+                    </div>
+                    <h3 class="mt-4 text-danger"><em>This action will be permanent!!</em></h3>
+                    <div class="mt-4 inline">
+                        <a href="/profile" class="btn btn-secondary w-50">Discard</a>
+                        <a href="/users/delete/{{user.id}}" class="btn btn-danger">Delete it!!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
