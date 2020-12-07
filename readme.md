@@ -1,11 +1,14 @@
-﻿*Santiago San Román Játiva* (Dic’ 2020) 
+*Santiago San Román Játiva* (Dic’ 2020)  
 <santi72alc@gmail.com>
 
 [mi LinkedIn](https://linkedin.com/in/santiagosanroman)
 
 ---
 
-# <center>Favorite Links</center>
+
+
+
+# Favorite Links
 
 Este proyecto está basado en un vídeo del magnífico youtuber ‘Fazt’ y el vídeo original, por si estás interesado en visionarlo, lo puede encontrar [aquí](https://www.youtube.com/watch?v=qJ5R9WTW0_E).
 
@@ -17,7 +20,7 @@ El servidor, y el control de sus rutas se realiza mediante Node.js y Express, mi
 
 Nos permite crear y mantener direcciones de links ‘favoritos’ de varios usuarios independientemente.
 
-Se trata de un **C***reate* **R***ead* **U***pdate* **D***elete* en el cual cada usuario podrá tener almacenados y mantenidos sus links ‘favoritos’.
+Se trata de un **C**reate **R**ead **U**pdate **D**elete en el cual cada usuario podrá tener almacenados y mantenidos sus links ‘favoritos’.
 
 ***Para este proyecto es necesario e imprescindible tener instalado y funcionando el servidor MySQL, el servidor de aplicaciones NODEjs y el gestor de paquetes NPM.***
 
@@ -28,6 +31,11 @@ En el caso de que el software requerido no esté instalado, les dejo links exter
 - Instalación de [Node y NPM](https://nodejs.org/es/download/) (elegir la versión adecuada al S.O.)
 
 Todas las instrucciones de instalación del proyecto son indicadas para el sistema operativo Linux, en su distribución UBUNTU o similares, que son en las que la he realizado. No debería ser muy difícil  adaptarlas para Windows u otro sistema operativo.
+
+
+* * *
+
+
 
 ### **Descarga del proyecto**
 
@@ -45,17 +53,17 @@ A continuación, abrir una terminal de comandos en el directorio del proyecto de
 
 ANTES de hacer nada con el proyecto descargado, verificaremos la existencia y el funcionamiento del servidor de MySQL en nuestro sistema.
 
->\$> mysql –version
+> $> mysql –version
 
 En caso de no tenerlo instalado, sugiero repetir las instrucciones indicadas anteriormente. Si lo tenemos instalado, comprobamos que el servicio esté activo.
 
->\$> service mysql status
+> $> service mysql status
 
 En color verde debe indicar que el servicio está activo ‘*active (running*)’. Presionaremos ‘Q’ para salir de la ventana activa.
 
 En el caso de NO tener el sistema activo lo activaremos mediante:
 
->\$> service mysql start
+> $> service mysql start
 
 Asumiendo que el servidor de MySQL está instalado y activo, ya podemos empezar con la configuración del proyecto. **Creación de la base de datos**
 
@@ -65,14 +73,14 @@ Este script se encarga de generar la base de datos ‘*database\_links*’ y las
 
 Debemos de posicionarnos en la carpeta ‘/database’ del directorio raíz en el que se ha clonado el proyecto y, dentro de ella, ejecutaremos el siguiente comando:
 
->\$> cd database
-\$> mysql -u *username* -p < create\_database.sql
+> $> cd database  
+$> mysql -u *username* -p < create\_database.sql
 
 donde *username* se deberá de cambiar por el usuario registrado en MySQL. Una vez introducida la clave del usuario indicado, se generará todo lo necesario referente a la base de datos y sus tablas.
 
 #### **Acceso a la base de datos** 
 
-La modificación a realizar es en el fichero ‘/src/*config.js*’ del proyecto.
+La modificación a realizar es en el fichero ‘*/src/config.js*’ del proyecto.
 
 Este fichero está con una estructura formato JSON y tiene datos de configuración en los que está la clave ‘*database*’ con sus valores. Debemos modificarlos y adecuarlos a nuestra conexión. En principio sólo habría que modificar el ‘*user*’ y ‘*password*’ para tener un correcto acceso a la base de datos.
 
@@ -82,15 +90,15 @@ Por último paso en la configuración del proyecto, sólo queda descargar y actu
 
 Para esto nos situaremos en el directorio raíz del proyecto y ejecutamos las siguientes órdenes:
 
->\$> npm install
+> $> npm install
 
-Con esta instrucción quedan instaladas y configuradas todas las librerías necesarias para el proyecto.w
+Con esta instrucción quedan instaladas y configuradas todas las librerías necesarias para el proyecto.
 
 #### **Ejecución del proyecto**
 
 La siguiente y última sentencia a ejecutar nos permite poner en marcha el proyecto.
 
->\$> npm run dev
+> $> npm run dev
 
 #### **Finalización del proyecto**
 
@@ -103,11 +111,11 @@ Los posibles errores que he detectado, es que pueda darse que el puerto a utiliz
 
 Para saber si el error de puerto es por nuestro proyecto, usaremos la sentencia:
 
->\$> lsof -i TCP:4000
+> $> lsof -i TCP:4000
 
 Si está ocupado el puerto saldrá un listado con el comando que lo está ocupando. Si se corresponde con NODE es el proyecto el que la tiene ocupado. Debemos ‘matar’  ese proceso y se hace con la siguiente instrucción:
 
->\$> kill *numPID*
+> $> kill *numPID*
 
 (donde *numPID* es el número de PID indicado en el listado)
 
