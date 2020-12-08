@@ -1,5 +1,5 @@
 body {
-    background: f5f6f5;
+    background: lightskyblue;
     font-family: "Oswald", sans-serif;
     overflow: hidden;
 }
@@ -26,6 +26,7 @@ body {
     color: black;
 }
 .masthead h1 {
+    font-size: revert;
     color: red;
     margin: 0;
     padding: 0;
