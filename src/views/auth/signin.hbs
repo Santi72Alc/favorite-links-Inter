@@ -1,24 +1,24 @@
 <div class="container p-4">
     <div class="row">
-        <div class="col-md-4 mx-auto">
-            <div class="card text-center">
-                <div class="car-header">
-                    <h3>SignIn</h3>
-                </div>
-                <div class="card-body">
-                    <img src="{{ appInfo.logo }}" alt="Logo App" class="card-img-top mx-auto m-2 rounded-circle w-50">
-                    <form action="/signin" method="POST">
-                        <div class="form-group">
-                            <input type="text" class="form-control" name="username" placeholder="Username">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" name="password" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <button class="btn btn-success btn-block">SignIn</button>
-                        </div>
-                    </form>
-                </div>
+        <div class="card col-8 col-sm-6 col-md-4 mx-auto text-center">
+            <div class="car-header m-3">
+                <h3>SignIn</h3>
+            </div>
+            <div class="card-body">
+                <img src="{{ appInfo.logo }}" alt="Logo App" class="card-img-top mx-auto m-2 rounded-circle w-50">
+                <form action="/signin" method="POST">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="username" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                    <hr>
+
+                    <div class="form-group">
+                        <button class="btn btn-success btn-block">SignIn</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
