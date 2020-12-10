@@ -4,6 +4,10 @@ const expHBS = require("express-handlebars");
 const path = require("path");
 
 const { appInfo, database, auth, server } = require("./config");
+
+console.log(database);
+console.log(server);
+
 const flash = require("connect-flash");
 const session = require("express-session");
 const MYSQLStore = require("express-mysql-session");
