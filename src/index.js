@@ -39,7 +39,7 @@ app.use(
         secret: auth.secret_text,
         resave: false,
         saveUninitialized: false,
-        store: new MYSQLStore(database),
+        store: new MYSQLStore(session),
     })
 );
 app.use(flash());
