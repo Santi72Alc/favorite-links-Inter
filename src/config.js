@@ -1,12 +1,9 @@
-/* 
-HEROKU confiuration
+const path = require("path");
+const environtment = require("dotenv");
 
-CLEARDB_DATABASE_URL: 
-    Host: eu-cdbr-west-03.cleardb.net
-    User: b051a52217a284
-    Root: 520fbacf
-    DB:   heroku_6781bd3fe4580a9
-*/
+environtment.config({
+    path: path.resolve(__dirname, ".env"),
+});
 
 module.exports = {
     appInfo: {
@@ -15,15 +12,15 @@ module.exports = {
         logo: "/img/logo.webp",
     },
     server: {
-        host: "localhost",
+        host: process.env.SERVER || "localhost",
         port: process.env.PORT || 4000,
     },
     database: {
-        host: "eu-cdbr-west-03.cleardb.net",
-        port: "3306",
-        user: "b051a52217a284",
-        password: "520fbacf",
-        database: "heroku_6781bd3fe4580a9",
+        host: process.env.DB_HOST || "localhost",
+        port: process.env.DB_PORT || "3306",
+        user: process.env.DB_USER || "admin_user_name",
+        password: process.env.DB_PASSWORD || "user_pass",
+        database: process.env.DB_NAME || "database_links",
     },
     auth: {
         secret_text: "EsteEsElTextoParaCodificarClaves",

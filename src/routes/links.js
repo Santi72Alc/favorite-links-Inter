@@ -60,6 +60,7 @@ router.get("/edit/:id", isLoggedIn, async (req, res) => {
 router.post("/edit/:id", isLoggedIn, async (req, res) => {
     const { id } = req.params;
     const { title, url, description } = req.body;
+    console.log(id);
     const newLink = {
         title,
         url,

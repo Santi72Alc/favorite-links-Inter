@@ -1,7 +1,7 @@
 body {
-    background: lightskyblue;
+    background: beige;
     font-family: "Oswald", sans-serif;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .index {
@@ -22,11 +22,17 @@ body {
 }
 
 .card {
+    width: 15rem;
+}
+.card,
+.card-body,
+.card-footer {
     background-color: lightcyan;
     color: black;
 }
+
 .masthead h1 {
-    font-size: revert;
+    /* font-size: revert; */
     color: red;
     margin: 0;
     padding: 0;

@@ -2,14 +2,13 @@ const express = require("express");
 const morgan = require("morgan");
 const expHBS = require("express-handlebars");
 const path = require("path");
+
+const { appInfo, database, auth, server } = require("./config");
 const flash = require("connect-flash");
 const session = require("express-session");
 const MYSQLStore = require("express-mysql-session");
 
 const passport = require("passport");
-
-const { appInfo, database, auth, server } = require("./config");
-const { isNotLoggedIn, isLoggedIn } = require("./lib/auth");
 
 // initializations
 const app = express();

@@ -1,2 +1,8 @@
 node_modules
 doc
+
+# Environtment variables  
+.env
+
+# Deploy files
+*-heroku

@@ -1,26 +1,25 @@
-<div class="container p-4">
+<div class="container">
+
     <div class="row">
 
-        {{!-- for each record saved... --}}
         {{#each links}}
-        <div class="col-md-3">
-            <div class="card-text-center">
-                <div class="card-body">
-                    <a href="{{ url }}" target="_blank">
-                        <h3 class="card-title text-uppercase">
-                            {{ title }}
-                        </h3>
-                    </a>
-                    <p class="m-2">{{ description }}</p>
-                    <p>{{timeago created_at}}</p>
-                    <a href="/links/delete/{{ id }}" class="btn btn-danger">Delete link</a>
-                    <a href="/links/edit/{{ id }}" class="btn btn-secondary">Edit</a>
-                </div>
+        {{!-- There are records saved... --}}
+
+        <div class="card rounded-lg mx-2 my-3 mx-auto text-center">
+            <div class="card-body">
+                <h4 class="card-title"><a href="{{ url }}" target="_blank">{{ title }}</a></h4>
+                <h6 class="card-subtitle text-muted">{{ timeago created_at }}</h6>
+                <p class="card-text mt-3">{{ description }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="/links/delete/{{ id }}" class="btn btn-danger">Delete link!</a>
+                <a href="/links/edit/{{ id }}" class="btn btn-secondary">Edit</a>
             </div>
         </div>
 
-        {{!-- No records to show --}}
         {{else}}
+
+        {{!-- No records to show --}}
         <div class="col-md-4 mx-auto">
             <div class="card card-body text-center">
                 <p>There are not links saved yet</p>
@@ -29,5 +28,9 @@
         </div>
 
         {{/each}}
+
     </div>
+</div>
+
+
 </div>
