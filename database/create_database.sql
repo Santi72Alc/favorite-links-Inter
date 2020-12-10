@@ -7,11 +7,14 @@
     This sentence must to be executed where this file is.
 */
 
-DROP DATABASE IF EXISTS database_links;
-CREATE DATABASE IF NOT EXISTS database_links CHARACTER SET utf8 COLLATE utf8_general_ci;
 
-USE database_links;
+/*
+ UNCOMMENT if you are using local 
+-- DROP DATABASE IF EXISTS database_links;
+-- CREATE DATABASE IF NOT EXISTS database_links CHARACTER SET utf8 COLLATE utf8_general_ci;
 
+-- USE database_links; 
+*/
 
 /* *************************************************
     Create users table 
