@@ -5,7 +5,7 @@
         {{#each links}}
         {{!-- There are records saved... --}}
 
-        <div class="card rounded-lg mx-2 my-3 mx-auto text-center">
+        <div class="card rounded-lg mx-sm-2 my-3 mx-auto shadow text-center">
             <div class="card-body">
                 <h4 class="card-title"><a href="{{ url }}" target="_blank">{{ title }}</a></h4>
                 <h6 class="card-subtitle text-muted">{{ timeago created_at }}</h6>
@@ -13,7 +13,7 @@
             </div>
             <div class="card-footer">
                 <a href="/links/delete/{{ id }}" class="btn btn-danger">Delete link!</a>
-                <a href="/links/edit/{{ id }}" class="btn btn-secondary">Edit</a>
+                <a href="/links/edit/{{ id }}" class="btn btn-secondary ml-3">Edit</a>
             </div>
         </div>
 

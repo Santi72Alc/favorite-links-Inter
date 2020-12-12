@@ -1,22 +1,27 @@
-<div class="container p-4">
+<div class="container pt-4">
     <div class="row">
-        <div class="col-md-6 mx-auto">
-            <div class="card p-4 text-center">
-                <div class="card-title">
-                    <h1>Delete your account, <em class="text-info">{{user.username}}</em> ??</h1>
+
+        <div id="card-delete" class="card col-6 col-md-8 col-sm-10 mx-2 my-3 pt-3 px-3 mx-auto shadow text-center">
+            <div class="card-title">
+                <h1>Delete your account, <em class="text-info">{{user.username}}</em> ??</h1>
+            </div>
+            <div class="card-body">
+                <div>
+                    <p>This action will delete your user account and all your links</p>
                 </div>
-                <div class="card-body">
-                    <div>
-                        <h4>This action delete your user account and all your saved links</h4>
-                        <h2 class="text-danger text-uppercase">Are you sure??</h2>
-                    </div>
-                    <h3 class="mt-4 text-danger"><em>This action will be permanent!!</em></h3>
-                    <div class="mt-4 inline">
-                        <a href="/profile" class="btn btn-secondary w-50">Discard</a>
-                        <a href="/users/delete/{{user.id}}" class="btn btn-danger">Delete it!!</a>
-                    </div>
+                <div class="p-3 border border-dark text-center shadow">
+                    <h3>This action will be permanent!!</h3>
+                    <hr>
+                    <h2 class="text-uppercase text-danger ">Are you sure??</h2>
+
+                </div>
+
+                <div class="mt-4">
+                    <a href="/profile" class="btn btn-secondary w-50 m-2">Discard</a>
+                    <a href="/users/delete/{{user.id}}" class="btn btn-danger m-2">Delete it!!</a>
                 </div>
             </div>
         </div>
+
     </div>
 </div>

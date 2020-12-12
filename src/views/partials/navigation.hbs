@@ -15,20 +15,26 @@
             <ul class="navbar-nav ml-auto">
                 {{#if user}}
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown_links" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Links
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_links">
                         <a class="dropdown-item" href="/links">All links</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="/links/add">Add a link</a>
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a href="/profile" class="nav-link">Profile</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="/profile" id="navbarDropdown_profile" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        User: {{ user.username }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown_profile">
+                        <a class="dropdown-item" href="/profile">Profile</a>
+                    </div>
                 </li>
-                <li class="clase-item">
+                <li class="nav-item">
                     <a href="/logout" class="nav-link">Logout</a>
                 </li>
                 {{else}}

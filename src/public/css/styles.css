@@ -2,23 +2,30 @@ body {
     background: beige;
     font-family: "Oswald", sans-serif;
     overflow: auto;
-}
-
-.index {
-    width: 100vw;
     height: 100vh;
 }
 
-.masthead {
+.index {
+    height: 90vh;
+}
+
+.index a {
     color: white;
-    min-height: 20rem;
-    width: 100%;
+}
+
+.masthead {
+    /* display: flex; 
+    width: 100%; */
     height: 100%;
-    /* padding-top: 4rem; */
     background: url("/img/background-img.webp");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover;
+}
+
+.masthead h1 {
+    color: red;
+    margin: 0;
+    padding: 0;
 }
 
 .card {
@@ -27,11 +34,23 @@ body {
     color: black;
 }
 
-.masthead h1 {
-    /* font-size: revert; */
-    color: red;
-    margin: 0;
-    padding: 0;
+#card-delete p {
+    font-size: 1.6rem;
+}
+
+@media (max-width: 550px) {
+    #card-delete h1 {
+        font-size: 1.8rem;
+    }
+    #card-delete h3 {
+        font-size: 1.4rem;
+        font-style: italic;
+        font-weight: bold;
+    }
+
+    #card-delete p {
+        font-size: 1.2rem;
+    }
 }
 
 @media (min-width: 992px) {
