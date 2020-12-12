@@ -1,7 +1,6 @@
 <div class="container pt-4">
     <div class="row">
-
-        <div id="card-delete" class="card col-6 col-md-8 col-sm-10 mx-2 my-3 pt-3 px-3 mx-auto shadow text-center">
+        <div id="card-delete" class="card col-md-8 col-sm-10 my-3 pt-3 px-3 mx-auto shadow text-center">
             <div class="card-title">
                 <h1>Delete your account, <em class="text-info">{{user.username}}</em> ??</h1>
             </div>
@@ -11,14 +10,11 @@
                 </div>
                 <div class="p-3 border border-dark text-center shadow">
                     <h3>This action will be permanent!!</h3>
-                    <hr>
                     <h2 class="text-uppercase text-danger ">Are you sure??</h2>
-
                 </div>
-
-                <div class="mt-4">
-                    <a href="/profile" class="btn btn-secondary w-50 m-2">Discard</a>
-                    <a href="/users/delete/{{user.id}}" class="btn btn-danger m-2">Delete it!!</a>
+                <div class="mt-4 inline">
+                    <a href="/profile" class="btn btn-secondary">Discard</a>
+                    <a href="/users/delete/{{user.id}}" class="btn btn-danger">Delete it!!</a>
                 </div>
             </div>
         </div>
