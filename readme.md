@@ -10,9 +10,11 @@
 
 # Favorite Links
 
-Este proyecto está basado en un vídeo del magnífico youtuber ‘Fazt’ y el vídeo original, por si estás interesado en visionarlo, lo puede encontrar [aquí](https://www.youtube.com/watch?v=qJ5R9WTW0_E).
+Este proyecto está basado en un vídeo del magnífico youtuber ‘Fazt’ y el vídeo original, por si estás interesado en visionarlo, lo puedes encontrar [aquí](https://www.youtube.com/watch?v=qJ5R9WTW0_E).
 
-Mi proyecto es **totalmente libre** para su uso, edición y distribución. ***Siempre es de agradecer que se referencie el creador inicial***.
+Mi proyecto es **totalmente libre** para su uso, edición y distribución. El repositorio se encuentra en GitHub y podéis descargarlo desde [aquí](https://github.com/Santi72Alc/favorite-links.git).
+
+***Siempre es de agradecer que se referencie el creador inicial***.
 
 Las tecnologías en las que se basa este proyecto son Javascript. Node.js, Express, Passport y MySQL para la base de datos y usuarios.
 
