@@ -7,8 +7,8 @@ environtment.config({
 
 const LANGUAGES = ["en", "es"];
 
-const langENV = LANGUAGES.includes(process.env.APP_LANGUAGE.toLowerCase())
-    ? process.env.APP_LANGUAGE.toLowerCase()
+const langENV = LANGUAGES.includes(process.env.APP_LANGUAGE)
+    ? process.env.APP_LANGUAGE
     : LANGUAGES[0];
 
 module.exports = {
@@ -17,7 +17,7 @@ module.exports = {
         name: "Favorite Links",
         background: "link-background-img.webp",
         logo: "/img/logo.webp",
-        language: langENV,
+        language: langENV.toLowerCase(),
     },
     server: {
         host: process.env.SERVER || "localhost",
