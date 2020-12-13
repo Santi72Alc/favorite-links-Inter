@@ -2,7 +2,7 @@ node_modules
 doc
 
 # Environtment variables  
-.env
+# .env
 
 # Deploy files
 *-local
