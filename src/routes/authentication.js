@@ -21,7 +21,7 @@ router.post(
     "/signup",
     isNotLoggedIn,
     passport.authenticate("local.signup", {
-        successRedirect: "/profile",
+        successRedirect: "/users/profile",
         failureRedirect: URL_BASE_SIGNUP,
         failureFlash: true,
     })
@@ -45,17 +45,11 @@ router.post("/signin", isNotLoggedIn, (req, res, next) => {
 });
 
 /* ******************************
-    PROFILE
-****************************** */
-router.get("/profile", isLoggedIn, (req, res) => {
-    res.render("profile");
-});
-
-/* ******************************
     LOGOUT
 ****************************** */
 router.get("/logout", isLoggedIn, (req, res) => {
-    req.logOut();
+    res.clearCookie("FL_lang");
+    res.req.logOut();
     res.redirect("/");
 });
 

@@ -1,4 +1,4 @@
-const { request } = require("express");
+const i18n = require("../lib/i18n");
 const passport = require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 
@@ -23,14 +23,24 @@ passport.use(
                 const user = users[0];
                 const validPassword = await matchPassword(password, user.password);
                 if (validPassword) {
-                    done(null, user, req.flash("success", `Welcome ${user.username}`));
+                    done(
+                        null,
+                        user,
+                        req.flash("success", i18n.__("Welcome {{username}}", { username }))
+                    );
                 } else {
-                    done(null, false, req.flash("error", "Incorrect password"));
+                    done(null, false, req.flash("error", i18n.__("Incorrect password")));
                 }
             } else {
                 // User NOT exist
-                console.log(users);
-                done(null, false, req.flash("error", "The Username does not exists!"));
+                done(
+                    null,
+                    false,
+                    req.flash(
+                        "error",
+                        i18n.__("The Username {{username}} does not exists!", { username })
+                    )
+                );
             }
         }
     )
@@ -61,7 +71,10 @@ passport.use(
                 return done(
                     null,
                     false,
-                    req.flash("error", "The Username has been taken already!")
+                    req.flash(
+                        "error",
+                        i18n.__("The Username {{username}} has been taken already!", { username })
+                    )
                 );
             }
 

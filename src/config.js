@@ -5,11 +5,19 @@ environtment.config({
     path: path.resolve(__dirname, ".env"),
 });
 
+const LANGUAGES = ["en", "es"];
+
+const langENV = LANGUAGES.includes(process.env.APP_LANGUAGE.toLowerCase())
+    ? process.env.APP_LANGUAGE.toLowerCase()
+    : LANGUAGES[0];
+
 module.exports = {
+    LANGUAGES,
     appInfo: {
         name: "Favorite Links",
         background: "link-background-img.webp",
         logo: "/img/logo.webp",
+        language: langENV,
     },
     server: {
         host: process.env.SERVER || "localhost",

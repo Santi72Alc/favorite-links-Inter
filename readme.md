@@ -13,6 +13,7 @@
 Este proyecto está basado en un vídeo del magnífico youtuber ‘Fazt’ y el vídeo original, por si estás interesado en visionarlo, lo puedes encontrar [aquí](https://www.youtube.com/watch?v=qJ5R9WTW0_E).
 
 Mi proyecto es **totalmente libre** para su uso, edición y distribución. El repositorio se encuentra en GitHub y podéis descargarlo desde [aquí](https://github.com/Santi72Alc/favorite-links.git).
+
 También está subido a [esta dirección](https://sr-favorite-links.herokuapp.com) de HEROKU para que se pueda probar su funcionamiento.
 
 ***Siempre es de agradecer que se referencie el creador inicial***.

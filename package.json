@@ -7,11 +7,14 @@
     "node": "12.x"
   },
   "scripts": {
-    "start": "node src",
-    "dev": "nodemon src"
+    "start": "node --experimental-modules src",
+    "dev": "nodemon --experimental-modules src"
   },
   "keywords": [
     "nodejs",
+    "javascript",
+    "passport",
+    "mysql",
     "crud"
   ],
   "author": "Santiago San Román Játiva",
@@ -19,12 +22,14 @@
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.2.0",
     "express-mysql-session": "^2.1.5",
     "express-session": "^1.17.1",
     "express-validator": "^6.8.0",
+    "i18n": "^0.13.2",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "passport": "^0.4.1",

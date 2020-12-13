@@ -2,19 +2,19 @@
     <div class="row">
         <div id="card-delete" class="card col-md-8 col-sm-10 my-3 pt-3 px-3 mx-auto shadow text-center">
             <div class="card-title">
-                <h1>Delete your account, <em class="text-info">{{user.username}}</em> ??</h1>
+                <h1>{{ __ "Delete your account, " }}<em class="text-info">{{user.username}}</em> ??</h1>
             </div>
             <div class="card-body">
                 <div>
-                    <p>This action will delete your user account and all your links</p>
+                    <p>{{ __ "This action will delete your user account and all your links" }}</p>
                 </div>
                 <div class="p-3 border border-dark text-center shadow">
-                    <h3>This action will be permanent!!</h3>
-                    <h2 class="text-uppercase text-danger ">Are you sure??</h2>
+                    <h3>{{ __ "This action will be permanent!!" }}</h3>
+                    <h2 class="text-uppercase text-danger ">{{ __ "Are you sure??" }}</h2>
                 </div>
                 <div class="mt-4 inline">
-                    <a href="/profile" class="btn btn-secondary">Discard</a>
-                    <a href="/users/delete/{{user.id}}" class="btn btn-danger">Delete it!!</a>
+                    <a href="/users/profile" class="btn btn-secondary">{{ __ "Discard" }}</a>
+                    <a href="/users/delete/{{user.id}}" class="btn btn-danger">{{ __ "Delete it!!" }}</a>
                 </div>
             </div>
         </div>

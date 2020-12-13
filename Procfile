@@ -1,1 +1,1 @@
-web: node src
+web: node --experimental-modules src

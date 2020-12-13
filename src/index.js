@@ -2,8 +2,13 @@ const express = require("express");
 const morgan = require("morgan");
 const expHBS = require("express-handlebars");
 const path = require("path");
+const cookieParser = require("cookie-parser");
+const app = express();
 
 const { appInfo, database, auth, server } = require("./config");
+
+// Internationalization
+const i18n = require("./lib/i18n");
 
 const flash = require("connect-flash");
 const session = require("express-session");
@@ -12,7 +17,6 @@ const MYSQLStore = require("express-mysql-session");
 const passport = require("passport");
 
 // initializations
-const app = express();
 require("../src/lib/passport");
 
 // settings
@@ -31,6 +35,7 @@ app.engine(
 app.set("view engine", ".hbs");
 
 // middlewares
+app.use(cookieParser());
 app.use(
     session({
         secret: auth.secret_text,
@@ -39,6 +44,7 @@ app.use(
         store: new MYSQLStore(database),
     })
 );
+app.use(i18n.init);
 app.use(flash());
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
@@ -49,6 +55,8 @@ app.use(passport.session());
 // Global Variables
 app.locals.appInfo = appInfo;
 app.use((req, res, next) => {
+    // TODO  ver porque se vuelve a ingles cuando se guarda la cookie en expañol
+    // const { FL_lang } = req.cookies;
     app.locals.success = req.flash("success");
     app.locals.message = req.flash("message");
     app.locals.error = req.flash("error");
@@ -67,7 +75,11 @@ app.use(express.static(path.join(__dirname, "public")));
 
 // Starting the server
 app.listen(app.get("port"), () => {
-    const port = app.get("port");
-    console.log(`Server listening at ${server.host} on port ${port}`);
-    console.log(`You can try it, press 'Ctrl+Click' on http://${server.host}:${port}`);
+    console.log("Server listening on port {{port}}", { port: app.get("port") });
+    console.log(
+        i18n.__("You can try it, press <Ctrl+Click> on http://{{server}}:{{port}}", {
+            server: server.host,
+            port: app.get("port"),
+        })
+    );
 });
